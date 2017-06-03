@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="plugins/jquery.mobile-1.4.5.min.css">
+<script src="plugins/jquery-1.11.3.min.js"></script>
+<script src="plugins/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="javascript/smurfs.js"></script>
+	<script type="text/javascript" src="javascript/smurfs2.js"></script>
+	<script type="text/javascript" src="javascript/smurfs3.js"></script>
+	<script type="text/javascript" src="javascript/smurfs4.js"></script>
+	<script type="text/javascript" src="javascript/smurfs5.js"></script>
+	<script type="text/javascript" src="javascript/sharpaigh.js"></script>
+	
+	<script type="text/javascript" src="javascript/smurfs6.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/sharpay.css" />
+
+	
+	
+	
+	<style>
+	
+	
+	
+	
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+	
+<script>
+$(window).on("navigate", function(event, data) {
+  var direction = data.state.direction;
+  if (direction == 'back') {
+ $.mobile.navigate.app.exitApp();
+  }
+  if (direction == 'forward') {
+    alert('Going forward');
+  }
+});
+ 
+$(document).on('click', '.showNextPage', function() {
+  $.mobile.navigate("#second", {
+    transition: "slide"
+  });
+});
+ 
+$(document).on('click', '.showPrevPage', function() {
+  $.mobile.navigate("#index", {
+    transition: "slide"
+  });
+});
+
+	
+	</script>
+	
+	
+	
+	
+
+</head>
+
+
+
+
+<style>
+
+
+.tabi{
+float:left;
+margin-top: 95%
+}
+
+#ins{
+margin-left:5%;}
+
+#play{
+margin-left: 17%;}
+
+</style> 	
+
+
+<body onload="enableAutoplay()">
+
+
+
+
+<div data-role="page" id="page1" style ="background-image: url('buttons/riddle.jpg');background-size: 100% 100%;">
+  <div data-role="header">
+  </div>
+  
+  
+  <div data-role="main" class="ui-content" onload="click()" >	
+  
+  <br>
+  
+  
+<center>
+
+
+</center>
+  
+  
+
+
+
+  
+  <div class="menu_button">
+  
+		<a href="#category" id="play" class="ui-btn tabi" onclick="statusOff();hi();changeColor();changeColor2();changeColor3();changeColor4();changeColor5();changeColor6();" data-transition="slide" style ="background-image:url('buttons/play_button.png');background-size: 100% 100%;height:70px;width:70px;background-color:transparent;border:0px none;"></a>
+<a href="#instruction" id="ins" class="ui-btn tabi" onclick="ins()" data-transition="slide"  style ="background-image:url('buttons/ins_button.png');background-size: 100% 100%;height:70px;width:70px;background-color:transparent;border:0px none;"></a>
+	</div>
+    
+    
+    
+    
+	</div>
+ 
+</div>
+
+
+
+	
+<div data-role="page" id="category"  style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1 style="font-size:22px;margin-top:-10px;">CATEGORY</h1>
+	 <a href="#page1" class="ui-btn ui-btn-right"  style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+
+   <br><br><br><br><br>
+  <br>
+  <center>
+      <a href="#english" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-image:url('buttons/but_eng.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+      <a href="#tagalog" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-image:url('buttons/but_taga.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+		<a href="#mix" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-image:url('buttons/but_mix.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+</center>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+<div data-role="page" id="english" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1 style="font-size:22px;margin-top:-10px;" >Riddle Modes</h1>
+	 <a href="#category" class="ui-btn ui-btn-right"  style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+
+   <br><br><br><br><br>
+  <br><br><br><center>
+    <a href="#e_untimed" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade" onclick="start_e_u();"  style ="background-image:url('buttons/but_untimed.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+    <a href="#e_timed" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"   onclick="tstart_e_u();"  style ="background-image:url('buttons/but_time.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;" ></a>
+</center>
+
+	</div>
+ 
+</div> 
+
+
+
+
+<div data-role="page" id="tagalog" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1 style="font-size:22px;margin-top:-10px;">Riddle Modes</h1>
+	 <a href="#category" class="ui-btn ui-btn-right"   style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+
+   <br><br><br><br><br>
+  <br><br><br><center>
+    <a href="#t_untimed" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade" onclick="start_t_u();"   style ="background-image:url('buttons/but_untimed.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+
+      <a href="#t_timed" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade" onclick="tstart_t_u();"  style ="background-image:url('buttons/but_time.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;" ></a>
+</center>
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="mix" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1 style="font-size:22px;margin-top:-10px;">Riddle Modes</h1>
+	 <a href="#category" class="ui-btn ui-btn-right"   style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+
+ 
+   <br><br><br><br><br>
+  <br><br><br><center>
+     <a href="#m_untimed"  onclick="start_m_u();" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-image:url('buttons/but_untimed.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;"></a>
+        <a href="#m_timed"  onclick="tstart_m_u();" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-image:url('buttons/but_time.png'); background-size: 100% 100%; background-color: transparent;border: 0px none; height: 30px; width: 220px;" ></a>
+</center>
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="instruction" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+	 <a href="#page1" class="ui-btn ui-btn-right"  style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+
+    <h1>Instructions</h1>
+  </div>
+  
+  
+  <div data-role="main" class="ui-content" >	
+
+
+	
+	
+		<div style="font-size:17px;">
+		  <center>
+<p><b>Riddle Riddle Riddle is divided into 3 categories: </b></p>	
+	<p>English, Tagalog, and Mix.</p>
+
+	<br>
+
+	<p><b>The game has two modes:</b></p>
+	</center>
+	<p><b>Timed Mode - </b> the player will be given 10 minutes to answer as many riddles as they can. In this mode, the player will not be game over even if he/she commits wrong answer. The game will be over if the player runs out of time.</p>
+	<br>
+		<p><b>Untimed Mode - </b> the player will be given 3 lives. In every wrong answer the player will be deducted 1 life. The game will be over if the player consumed all his/her 3 lives. </p>
+	
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In <b>Untimed</b>, you have 3 hints to use. Those 3 hints will be recovered after every five riddles. The first hint is to show how many letters is the answer. The second hint is to show the first letter of the answer. And the third hint is to show what letter the answer ends.</p>
+	</div>
+	
+	</div>
+  
+</div>
+
+
+
+
+<div data-role="page" id="credits" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+	 <a href="#" class="ui-btn ui-btn-right" data-rel="back"   style ="height:35px;width:30px;background-color:transparent;border:none;margin-top:-5px;"><img src="buttons/a3.png" style="height:100%;width:100%;" /></a>
+
+    <h1>Credits</h1>
+  </div>
+  
+  
+  <div data-role="main" class="ui-content" >	
+
+  
+ 	
+	
+<center>		
+<h3 id ="cre0" >Developers:</h3>
+<h4 id ="cre1" >Peejay Lopez</h4>
+<h4 id ="cre2" >Julius Seastres</h4>
+<h4 id ="cre3" >Emerlyn Baligod</h4>
+	</center>
+	</div>
+  
+</div>
+
+
+
+
+
+
+
+
+<div data-role="page" id="e_untimed" style ="background: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="score" style="font-size:13px;">score</p>
+		    <p style="font-size:13px;" id="numero">numero</p>
+
+      </div>
+	  
+ <div class="ui-block-b">
+        <p  onclick="homing();"><a id="home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+      
+	  <img id="lif3" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="lif2" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="lif1" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img>
+      </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+
+<div style="height:30px;">
+
+<table>
+<tr align="center">
+<td id="hint" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="hint();">
+hint1
+
+</td>
+<td id="f_hint" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint1</b>
+
+</td>
+<td id="hint2" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="hint2();">
+hint2
+
+</td>
+
+<td id="f_hint2" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint2</b>
+
+</td>
+<td id="hint3" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="hint3();">
+hint3
+
+</td>
+<td id="f_hint3" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint3</b>
+
+</td>
+
+
+</tr>
+</table>
+
+
+
+
+
+</div>
+
+<div style="height:20px;"><p id="dito" style="color:darkred;font-size:18px;"></p></div>
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="question" style="font-size:19px;color:black;" >question?</p></b>
+</td>
+</tr>
+</table>
+
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="ans">answer</p></b>
+</td>
+
+<td onclick="bura();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px" ></img>
+</td>
+
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="a" value="" class="ui-btn ui-btn-inline" onclick="a();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="b" value="" class="ui-btn ui-btn-inline" onclick="b();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="c" value="" class="ui-btn ui-btn-inline" onclick="c();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="d" value="" class="ui-btn ui-btn-inline" onclick="d();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="e" value="" class="ui-btn ui-btn-inline" onclick="e();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="f" value="" class="ui-btn ui-btn-inline" onclick="f();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="g" value="" class="ui-btn ui-btn-inline" onclick="g();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="h" value="" class="ui-btn ui-btn-inline" onclick="h();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="i" value="" class="ui-btn ui-btn-inline" onclick="i();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="j" value="" class="ui-btn ui-btn-inline" onclick="j();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="submit" class="ui-btn ui-btn-inline" onclick="submit();" data-transition="slide">submit</a>
+<a href="" id="reset" class="ui-btn ui-btn-inline" onclick="reset()" data-transition="slide">clear</a>
+
+	
+</center>
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="winner_e_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Congratulations You finish the game with the<p>
+ <p id="fscore_e_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="cokay_e_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="exit_e_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  <br><br><br><br>
+  <table align="center"><tr><td>
+  
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+  
+  
+  
+  <table >
+<tr align="center">
+<td style="width:1000px;">
+
+ <b><p id="gfscore_e_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="gokay_e_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="t_untimed" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="tscore"  style="font-size:13px;">score</p>
+		   <p id="tnumero"  style="font-size:13px;">Copyright Reserved</p>
+ 
+      </div>
+
+ <div class="ui-block-b">
+        <p  onclick="homing2();"><a id="2home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+      
+	  <img id="tlif3" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="tlif2" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="tlif1" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img>
+      </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+
+
+<div style="height:30px;">
+<table>
+<tr align="center">
+<td id="thint" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="thint();">
+hint1
+
+</td>
+
+<td id="f_thint" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint1</b>
+
+</td>
+
+
+<td id="thint2" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="thint2();">
+hint2
+
+</td>
+
+<td id="f_thint2" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint2</b>
+
+</td>
+
+<td id="thint3" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="thint3();">
+hint3
+
+</td>
+
+<td id="f_thint3" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint3</b>
+
+</td>
+
+</tr>
+</table>
+
+</div>
+
+
+<div style="height:20px;"><p id="tdito" style="color:darkred;font-size:18px;"></p></div>
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="tquestion" style="font-size:19px;color:black;" >question?</p></b>
+</td>
+</tr>
+</table>
+	<br>
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="tans">answer</p></b>
+</td>
+
+<td onclick="bura2();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px" ></img>
+</td>
+
+
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ta" value="" class="ui-btn ui-btn-inline" onclick="ta();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tb" value="" class="ui-btn ui-btn-inline" onclick="tb();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tc" value="" class="ui-btn ui-btn-inline" onclick="tc();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="td" value="" class="ui-btn ui-btn-inline" onclick="td();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="te" value="" class="ui-btn ui-btn-inline" onclick="te();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tf" value="" class="ui-btn ui-btn-inline" onclick="tf();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tg" value="" class="ui-btn ui-btn-inline" onclick="tg();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="th" value="" class="ui-btn ui-btn-inline" onclick="th();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ti" value="" class="ui-btn ui-btn-inline" onclick="ti();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tj" value="" class="ui-btn ui-btn-inline" onclick="tj();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="tsubmit" class="ui-btn ui-btn-inline" onclick="tsubmit()" data-transition="slide">submit</a>
+<a href="" id="treset" class="ui-btn ui-btn-inline" onclick="treset()" data-transition="slide">clear</a>
+
+	
+</center>
+	</div>
+
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="winner_t_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Congratulations You finish the game with the<p>
+ <p id="fscore_t_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="cokay_t_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="exit_t_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+ 
+
+ <br><br><br><br>
+  <table  align="center"><tr><td>
+  
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+  
+  
+  <table>
+<tr align="center">
+<td style="width:1000px;">
+<b> <p id="gfscore_t_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="gokay_t_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="m_untimed" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="mscore"  style="font-size:13px;">score</p>
+		  <p id="mnumero"  style="font-size:13px;">Copyright Reserved</p>
+
+      </div>
+
+ <div class="ui-block-b">
+        <p  onclick="homing3();"><a id="3home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+           <div class="ui-block-c">
+      
+	  <img id="mlif3" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="mlif2" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img><img id="mlif1" src="ground/life2.gif" style="width:30px;height:30px;padding-top:10px;" ></img>
+      </div>
+ </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+<div style="height:30px;">
+<table>
+<tr align="center">
+<td id="mhint" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="mhint();">
+hint1
+
+</td>
+<td id="f_mhint" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint1</b>
+
+</td>
+
+
+<td id="mhint2" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="mhint2();">
+hint2
+
+</td>
+<td id="f_mhint2" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint2</b>
+
+</td>
+
+
+<td id="mhint3" style="background: #4433ff;border-radius:10px;height:30px;width:65px;font-size:17px;color:white;" onclick="mhint3();">
+hint3
+
+</td>
+<td id="f_mhint3" style="background:lightgreen;border-radius:10px;height:30px;width:65px;font-size:17px;">
+<b>hint3</b>
+
+</td>
+
+
+</tr>
+</table>
+
+</div>
+
+
+
+<div style="height:20px;"><p id="mdito" style="color:darkred;font-size:18px;"></p></div>
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="mquestion" style="font-size:19px;color:black;" >question?</p></b>
+</td>
+</tr>
+</table>
+	<br>
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="mans">answer</p></b>
+</td>
+
+<td onclick="bura3();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px;" ></img>
+</td>
+
+
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ma" value="" class="ui-btn ui-btn-inline" onclick="ma();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mb" value="" class="ui-btn ui-btn-inline" onclick="mb();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mc" value="" class="ui-btn ui-btn-inline" onclick="mc();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="md" value="" class="ui-btn ui-btn-inline" onclick="md();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="me" value="" class="ui-btn ui-btn-inline" onclick="me();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mf" value="" class="ui-btn ui-btn-inline" onclick="mf();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mg" value="" class="ui-btn ui-btn-inline" onclick="mg();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mh" value="" class="ui-btn ui-btn-inline" onclick="mh();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mi" value="" class="ui-btn ui-btn-inline" onclick="mi();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mj" value="" class="ui-btn ui-btn-inline" onclick="mj();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="msubmit" class="ui-btn ui-btn-inline" onclick="msubmit()" data-transition="slide">submit</a>
+<a href="" id="mreset" class="ui-btn ui-btn-inline" onclick="mreset()" data-transition="slide">clear</a>
+
+	
+</center>
+	</div>
+
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="winner_m_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p >Congratulations You finish the game with the<p>
+ <p id="fscore_m_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="cokay_m_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="exit_m_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  
+   <br><br><br><br>
+  <table align="center"><tr><td>
+ 
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+ 
+  
+  <table>
+<tr align="center">
+<td style="width:1000px;">
+ <b><p id="gfscore_m_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="gokay_m_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+<div data-role="page" id="e_timed" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="scoret"  style="font-size:13px;">score</p>
+		    <p id="numerot"  style="font-size:13px;">Copyright Reserved</p>
+ 
+      </div>
+
+ <div class="ui-block-b">
+        <p  onclick="homing4();"><a id="4home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+        <p id="lifet">life</p>
+      </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+
+
+
+<div id="try1">
+
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="questiont" style="font-size:19px;color:black;" >question?</p></b>
+</td>
+</tr>
+</table>
+	<br>
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="anst">answer</p></b>
+</td>
+
+<td onclick="bura4();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px;" ></img>
+</td>
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="at" value="" class="ui-btn ui-btn-inline" onclick="at();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="bt" value="" class="ui-btn ui-btn-inline" onclick="bt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ct" value="" class="ui-btn ui-btn-inline" onclick="ct();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="dt" value="" class="ui-btn ui-btn-inline" onclick="dt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="et" value="" class="ui-btn ui-btn-inline" onclick="et();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ft" value="" class="ui-btn ui-btn-inline" onclick="ft();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="gt" value="" class="ui-btn ui-btn-inline" onclick="gt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="ht" value="" class="ui-btn ui-btn-inline" onclick="ht();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="it" value="" class="ui-btn ui-btn-inline" onclick="it();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="jt" value="" class="ui-btn ui-btn-inline" onclick="jt();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="submitt" class="ui-btn ui-btn-inline" onclick="submitt()" data-transition="slide">submit</a>
+<a href="" id="resett" class="ui-btn ui-btn-inline" onclick="resett()" data-transition="slide">clear</a>
+
+
+</div>
+
+
+
+ <div id="gameover">
+  
+  
+   <br><br><br><br>
+  <table align="center"><tr><td>
+ 
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+ 
+  
+  
+  <table>
+<tr align="center">
+<td style="width:1000px;">
+ <b><p id="tgfscore_e_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_e_u();">Okay</a>
+
+	</div>
+</center>
+	</div>
+  
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="twinner_e_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Congratulations You finish the game with the<p>
+ <p id="tfscore_e_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="tcokay_e_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="redgame" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Game Over<p>
+ <p id="tgfscore_e_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_e_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="t_timed" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="tscoret" style="font-size:13px;">score</p>
+		  <p id="tnumerot" style="font-size:13px;">Copyright Reserved</p>
+      </div>
+<div class="ui-block-b">
+        <p  onclick="homing5();"><a id="5home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+        <p id="tlifet">life</p>
+      </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+
+<div id="try2">
+
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="tquestiont" style="font-size:19px;color:black;" >question?</p></b>
+</td>
+</tr>
+</table>
+	<br>
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="tanst">answer</p></b>
+</td>
+
+
+<td onclick="bura5();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px;" ></img>
+</td>
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tat" value="" class="ui-btn ui-btn-inline" onclick="tat();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tbt" value="" class="ui-btn ui-btn-inline" onclick="tbt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tct" value="" class="ui-btn ui-btn-inline" onclick="tct();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tdt" value="" class="ui-btn ui-btn-inline" onclick="tdt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tet" value="" class="ui-btn ui-btn-inline" onclick="tet();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tft" value="" class="ui-btn ui-btn-inline" onclick="tft();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tgt" value="" class="ui-btn ui-btn-inline" onclick="tgt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tht" value="" class="ui-btn ui-btn-inline" onclick="tht();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tit" value="" class="ui-btn ui-btn-inline" onclick="tit();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="tjt" value="" class="ui-btn ui-btn-inline" onclick="tjt();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="tsubmitt" class="ui-btn ui-btn-inline" onclick="tsubmitt()" data-transition="slide">submit</a>
+<a href="" id="tresett" class="ui-btn ui-btn-inline" onclick="tresett()" data-transition="slide">clear</a>
+</div>
+
+
+<div id="tgameover">
+  
+   <br><br><br><br>
+  <table align="center"><tr><td>
+ 
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+ 
+  
+	 
+  <table >
+<tr align="center">
+<td style="width:1000px;">
+ <b><p id="tgfscore_t_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_t_u();">Okay</a>
+
+	</div>
+</center>
+	</div>
+
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="twinner_t_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Congratulations You finish the game with the<p>
+ <p id="tfscore_t_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="tcokay_t_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="tredgame" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: white">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Game Over<p>
+ <p id="tgfscore_t_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_t_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="m_timed" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+  <div class="ui-grid-b" align="center">
+      <div class="ui-block-a">
+        <p id="mscoret" style="font-size:13px;">score</p>
+		   <p id="mnumerot" style="font-size:13px;">Copyright Reserved</p>
+
+      </div>
+<div class="ui-block-b">
+        <p  onclick="homing6();"><a id="6home_b" href="#page1" data-transition="slide">
+		<img src="ground/home_w.png" style="width:30px;height:30px;" ></img></a></p>
+      </div>
+
+      <div class="ui-block-c">
+        <p id="mlifet">life</p>
+      </div>
+</div>
+  </div>
+
+  
+  <div data-role="main" class="ui-content">
+<center>
+
+<div id="try3" >
+
+<table  >
+<tr align="center">
+<td >
+
+<b><p id="mquestiont" style="font-size:19px;color:black;" >question?</p></b>
+
+</td>
+</tr>
+</table>
+	<br>
+	
+	<table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="height:50px;width:300px">
+<b><p id="manst">answer</p></b>
+</td>
+
+
+<td onclick="bura6();" style="height:50px;width:50px;">
+<img src="buttons/a1.png" style="height:50px;width:50px;" ></img>
+</td>
+
+</tr>
+</table>
+	
+	
+	
+	<br>
+	
+	
+	
+	<table>
+<tr align="center">
+<td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mat" value="" class="ui-btn ui-btn-inline" onclick="mat();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mbt" value="" class="ui-btn ui-btn-inline" onclick="mbt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mct" value="" class="ui-btn ui-btn-inline" onclick="mct();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mdt" value="" class="ui-btn ui-btn-inline" onclick="mdt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="met" value="" class="ui-btn ui-btn-inline" onclick="met();"></button></div>
+</td></tr>
+<tr><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mft" value="" class="ui-btn ui-btn-inline" onclick="mft();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mgt" value="" class="ui-btn ui-btn-inline" onclick="mgt();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mht" value="" class="ui-btn ui-btn-inline" onclick="mht();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mit" value="" class="ui-btn ui-btn-inline" onclick="mit();"></button></div>
+</td><td><div style="width:55px;height:55px;">
+<button style="background-color:lightgreen;" id="mjt" value="" class="ui-btn ui-btn-inline" onclick="mjt();"></button></div>
+</td>
+</tr>
+</table>
+
+
+<a href="" id="msubmitt" class="ui-btn ui-btn-inline" onclick="msubmitt()" data-transition="slide">submit</a>
+<a href="" id="mresett" class="ui-btn ui-btn-inline" onclick="mresett()" data-transition="slide">clear</a>
+</div>
+
+
+<div id="mgameover">
+
+  
+   <br><br><br><br>
+  <table align="center"><tr><td>
+ 
+  <img src="ground/qqqq.png" style="width:100%;"></img>
+  </td></tr></table>
+ 
+  
+  
+  <table >
+<tr align="center">
+<td style="width:1000px;">
+<b><p id="tgfscore_m_u"></p></b>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_m_u();">Okay</a>
+
+
+
+</div>
+	
+	
+</center>
+	</div>
+
+</div> 
+
+
+
+
+
+
+<div data-role="page" id="twinner_m_u" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Congratulations You finish the game with the<p>
+ <p id="tfscore_m_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;"  onclick="tcokay_m_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+<div data-role="page" id="mredgame" style ="background-color: #03eba2;background-size: 100% 100%;">
+  <div data-role="header" style ="background-color: #e8e8e8;height:50px;">
+    <h1>Riddle Riddle</h1>
+ </div>
+
+  
+  <div data-role="main" class="ui-content">
+  
+  
+  <table border="2px" style="background-color: white;">
+<tr align="center">
+<td style="width:1000px;">
+<p>Game Over<p>
+ <p id="tgfscore_m_u"></p>
+  </td>
+</tr>
+</table>
+    <a href="#page1" class="ui-btn ui-corner-all ui-shadow" data-transition="slidefade"  style ="background-color:lightgreen;" onclick="tgokay_m_u();">Okay</a>
+
+
+	</div>
+ 
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
